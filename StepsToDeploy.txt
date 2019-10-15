@@ -1,0 +1,15 @@
+- Download "WinSW.NET4.out.exe" from https://github.com/kohsuke/winsw/releases[Sample Folder:Test]
+- Copy jar file, application.properties file and WinSW.NET4.out.exe to a folder location
+- Create the WinSW.NET4.xml file with following example configuration,
+	<configuration>
+	<id>timeupdate-service</id>
+	<name>Timeupdate Service</name>
+	<description>Spring boot Application</description>
+	<executable>java</executable>
+	<arguments>-Dspring.config.location=application.properties -jar %Base%\TimesheetUpdate-0.0.1.jar</arguments>
+	</configuration>
+- Open command prompt as an administartor
+- cd to the folder which you have created in the first step(Test)
+- Run the command "WinSW.NET4.exe install"
+- Following successlog will be printed, "Installing the service with id 'timeupdate-service'"
+- Open windows local services, start 'timeupdate-service'
